@@ -7,10 +7,12 @@ import gm from '../assets/gmail.svg'
 import lc from '../assets/leetcode.svg'
 const About = ({ setindex }) => {
     const [animate, setanimate] = useState(false)
+    
     useEffect(() => {
         setInterval(() => {
             setanimate(true)
         }, 10);
+        localStorage.setItem('prev', '#F9F8F6')
     }, [])
 
     return (
@@ -21,7 +23,7 @@ const About = ({ setindex }) => {
                     console.log('heheh')
                 }
             }>
-            <div className={' h-110 w-120 flex flex-col gap-3 p-5 transition-transform duration-700 ease-out ' +
+            <div className={' h-110 w-120 flex flex-col gap-3 p-5 transition-transform duration-800 ease-out ' +
                 (animate ? 'translate-x-0' : '-translate-x-600')}>
                 <div className='text-6xl font-bold  box-border '>
                     about.
