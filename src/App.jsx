@@ -1,34 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import About from './components/about'
+import Nav from './components/nav'
+import Skills from './components/skills'
+import Projects from './components/projects.jsx'
+import Achivements from './components/achivements.jsx'
+import Contacts from './components/contacts.jsx'
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [index, setindex] = useState(1)
+  const list = [<About setindex={setindex} />, <Skills setindex={setindex} />, <Projects setindex={setindex} />, <Achivements setindex={setindex} />, <Contacts setindex={setindex} />]
+  const colors = ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C']
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className={`relactive h-screen w-screen bg-[${colors[index]}] `}>
+      <Nav />
+      {
+        list[index]
+      }
+    </div>
   )
 }
 
