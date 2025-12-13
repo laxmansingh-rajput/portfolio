@@ -7,23 +7,19 @@ import gm from '../assets/gmail.svg'
 import lc from '../assets/leetcode.svg'
 const About = ({ setindex }) => {
     const [animate, setanimate] = useState(false)
-    
+
     useEffect(() => {
         setInterval(() => {
             setanimate(true)
         }, 10);
         localStorage.setItem('prev', '#F9F8F6')
     }, [])
+ 
 
     return (
-        <div className='h-full w-full flex items-center justify-center gap-10 font-mono overflow-hidden '
-            onScroll={
-                () => {
-                    setindex(1)
-                    console.log('heheh')
-                }
-            }>
-            <div className={' h-110 w-120 flex flex-col gap-3 p-5 transition-transform duration-800 ease-out ' +
+        <div className=' min-h-screen w-full flex items-center justify-center gap-10 font-mono overflow-hidden max-[900px]:flex-col max-[900px]:overflow-y-scroll max-[900px]:pt-18  pb-15'
+        >
+            <div className={'h-auto w-1/2 flex flex-col gap-6 p-5 transition-transform duration-800 ease-out max-[900px]:w-full ' +
                 (animate ? 'translate-x-0' : '-translate-x-600')}>
                 <div className='text-6xl font-bold  box-border '>
                     about.
@@ -54,11 +50,11 @@ const About = ({ setindex }) => {
             </div>
             <div
                 className={
-                    'select-none border-3 h-110 w-90 overflow-hidden rounded-xl transition-transform duration-800 ease-out ' +
+                    'select-none border-3 h-110 w-90 overflow-hidden rounded-xl transition-transform duration-800 ease-out max-[600px]:w-70 max-[600px]:h-90 ' +
                     (animate ? 'translate-x-0' : 'translate-x-600')
                 }
             >
-                <img src={me} className=' object-contain' alt="" />
+                <img src={me} className=' object-cover h-full w-full object-top' alt="" />
             </div>
         </div>
     )
