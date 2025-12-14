@@ -9,6 +9,7 @@ import Contacts from './components/contacts.jsx'
 function App() {
   const [index, setindex] = useState(() => {
     const ind = localStorage.getItem('index')
+    console.log(ind)
     if (ind) return ind
     return 0
   })
@@ -38,6 +39,7 @@ function App() {
     setTimeout(() => {
       setprevColor(colors[index])
     }, 200);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [index])
 
   useEffect(() => {
@@ -52,10 +54,6 @@ function App() {
     }
   }, [scrollPercentage])
 
-  useEffect(() => {
-    console.log(canChange)
-  }, [canChange])
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -67,22 +65,23 @@ function App() {
       const winHeight = window.innerHeight
       const scrollPercent =
         (scrollTop / (docHeight - winHeight)) * 100
-      console.log(Math.round(scrollPercent))
       setscrollPercentage(Math.round(scrollPercent))
     }
     helper()
     window.addEventListener('scroll', helper)
     return () => window.removeEventListener('scroll', helper)
   }, [])
-
+  const [first, setfirst] = useState(true)
   return (
     <div
-      className=" min-h-screen w-full transition-colors duration-500 relative"
+      className=" min-h-screen w-full transition-colors duration-500 relative overflow-hidden = max-[900px]:overflow-y-scroll "
       style={{ backgroundColor: prevColor }}
       onWheel={
         (e) => {
           if (!animate) return
-          if (e.deltaY > 0 && canChange === 2) {
+
+          console.log(scrollPercentage)
+          if (e.deltaY > 0 && (canChange === 2 || Number.isNaN(scrollPercentage))) {
             let newVal = Math.min(index + 1, list.length - 1)
             setindex(newVal)
             localStorage.setItem('index', newVal)
@@ -92,7 +91,7 @@ function App() {
               setanimate(true)
             }, 800);
           }
-          if (e.deltaY < 0 && canChange === 1) {
+          if (e.deltaY < 0 && (canChange === 0 || Number.isNaN(scrollPercentage))) {
             let newVal = Math.max(index - 1, 0)
             setindex(newVal)
             localStorage.setItem('index', newVal)
@@ -105,22 +104,22 @@ function App() {
         }
       }
     >
-      <Nav bg={prevColor} />
+      <Nav bg={prevColor} index={index} setindex={setindex}  />
       {
         list[index]
       }
-      <div className='main absolute bottom-0 w-full h-13 flex items-center justify-center'>
+      <div className='main absolute bottom-0 w-full h-13 flex items-center justify-center transition-colors duration-500 ' style={{ backgroundColor: prevColor }}>
         <div className=' h-full  flex items-center justify-center gap-2'>
           {
             list.map((_, i) => (
-              <div key={i} className={`rounded-full border border-gray-400/30 cursor-pointer hover:bg-black/30 transition-all duration-300 ease-out ${i === index
+              <div key={i} className={`rounded-full border border-gray-400/30 cursor-pointer hover:bg-black/30 transition-all duration-300 ease-out ${i == index
                 ? 'h-3 w-3 bg-black/40 scale-110'
                 : 'h-2 w-2 bg-black/10'
                 }`
               }
                 onClick={() => {
                   setindex(i)
-                  localStorage.setItem('index', index)
+                  localStorage.setItem('index', i)
                 }}
               >
               </div>

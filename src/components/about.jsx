@@ -14,7 +14,7 @@ const About = ({ setindex }) => {
         }, 10);
         localStorage.setItem('prev', '#F9F8F6')
     }, [])
- 
+
 
     return (
         <div className=' min-h-screen w-full flex items-center justify-center gap-10 font-mono overflow-hidden max-[900px]:flex-col max-[900px]:overflow-y-scroll max-[900px]:pt-18  pb-15'
@@ -33,6 +33,11 @@ const About = ({ setindex }) => {
                 <div className='text-[20px] text-black/70 font-medium '>
                     I build modern, scalable web applications using the MERN stack, and I have foundational knowledge of DevOps tools like Docker, Kubernetes, AWS, and Jenkins.
                 </div>
+                <div className='w-full flex items-center text-black/70  justify-start '>
+                    <div className='px-5 py-1 h-auto min-w-0  rounded-md bg-[#C9B59C] font-semibold cursor-pointer hover:scale-95 transition-all ease-in duration-200 '>
+                        View Resume
+                    </div>
+                </div>
                 <div className='flex gap-3 w-full'>
                     <img src={ln} className='h-10 cursor-pointer hover:scale-95 transition-all ease-out select-none ' onClick={() => {
                         window.location.href = "https://www.linkedin.com/in/laxman-singh-rajput-5a58352b7/";
@@ -46,6 +51,8 @@ const About = ({ setindex }) => {
                     <img src={lc} className='h-10 cursor-pointer hover:scale-95 transition-all ease-out select-none ' onClick={() => {
                         window.location.href = "https://leetcode.com/u/Laxmansinghrajput/";
                     }} alt="" />
+
+
                 </div>
             </div>
             <div
