@@ -70,7 +70,7 @@ function App() {
     helper()
     window.addEventListener('scroll', helper)
     return () => window.removeEventListener('scroll', helper)
-  }, [])
+  }, [index])
   const [first, setfirst] = useState(true)
   return (
     <div
@@ -104,7 +104,7 @@ function App() {
         }
       }
     >
-      <Nav bg={prevColor} index={index} setindex={setindex}  />
+      <Nav bg={prevColor} index={index} setindex={setindex} />
       {
         list[index]
       }
