@@ -23,7 +23,7 @@ function App() {
     <Achivements setindex={setindex} />,
     <Contacts setindex={setindex} />
   ]
-  const colors = ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#C9B59C']
+  const colors = ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#B8A082']
 
   const [prevColor, setprevColor] = useState(
     () => {
