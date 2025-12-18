@@ -28,7 +28,7 @@ const achivements = () => {
         <div className='w-full flex items-center justify-center gap-3'>
           <button
             className={
-              'border border-[#6b5a45] px-4 py-1 rounded-full cursor-pointer font-semibold transition-all ease-in duration-100 flex items-center gap-1 ' +
+              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold transition-all ease-in duration-100 flex items-center gap-1 ' +
               (curr == 1
                 ? 'bg-[#9C948B] text-[#2e241a]'
                 : 'bg-[#d3ccc3] text-[#4a3c2a]')
@@ -46,7 +46,7 @@ const achivements = () => {
 
           <button
             className={
-              'border border-[#6b5a45] px-4 py-1 rounded-full cursor-pointer font-semibold transition-all ease-in duration-100 flex items-center gap-1 ' +
+              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold transition-all ease-in duration-100 flex items-center gap-1 ' +
               (curr == 2
                 ? 'bg-[#9C948B] text-[#2e241a]'
                 : 'bg-[#d3ccc3] text-[#4a3c2a]')
