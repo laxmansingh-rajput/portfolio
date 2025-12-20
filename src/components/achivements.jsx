@@ -2,19 +2,30 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import experience from '../data/experience.js'
 import certifications from '../data/certifications.js'
+import { zoom, topDown } from '../controller/animation.js'
+
 const achivements = () => {
   const [curr, setcurr] = useState(1)
   const [List, setList] = useState(() => {
     return Object.values(certifications)
   })
+  const [animate, setanimate] = useState(false)
   useEffect(() => {
-    console.log(List)
-  }, [List])
+    setTimeout(() => {
+      setanimate(true)
+    }, 100);
+  }, [])
 
   return (
-    <div className='min-h-screen w-full relative pt-40 font-mono '>
+    <div className={'min-h-screen w-full relative pt-40 font-mono ' + topDown(animate)}>
 
-      <div className='flex flex-col items-center justify-center w-full absolute top-18 left-0 gap-1 text-[#3b3024]'>
+      <div className="absolute top-10 right-10 w-32 h-32 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
+      <div className="absolute bottom-10 left-10 w-40 h-40 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
+      <div className="absolute bottom-55 right-56 w-25 h-25 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
+      <div className="absolute bottom-90 left-30 w-25 h-25 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
+      <div className="absolute top-155 left-156 w-25 h-25 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
+
+      <div className={'flex flex-col items-center justify-center w-full absolute top-18 left-0 gap-1 text-[#3b3024]'+ zoom(animate)}>
         <div className='text-2xl font-bold'>
           My Journey
         </div>
@@ -28,10 +39,10 @@ const achivements = () => {
         <div className='w-full flex items-center justify-center gap-3'>
           <button
             className={
-              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold transition-all ease-in duration-100 flex items-center gap-1 ' +
+              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1 ' +
               (curr == 1
                 ? 'bg-[#9C948B] text-[#2e241a]'
-                : 'bg-[#d3ccc3] text-[#4a3c2a]')
+                : 'bg-[#d3ccc3] text-[#4a3c2a] hover:bg-[#c6beb5]')
             }
             onClick={
               () => {
@@ -46,10 +57,10 @@ const achivements = () => {
 
           <button
             className={
-              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold transition-all ease-in duration-100 flex items-center gap-1 ' +
+              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1  ' +
               (curr == 2
                 ? 'bg-[#9C948B] text-[#2e241a]'
-                : 'bg-[#d3ccc3] text-[#4a3c2a]')
+                : 'bg-[#d3ccc3] text-[#4a3c2a] hover:bg-[#c6beb5]')
             }
             onClick={
               () => {
@@ -72,7 +83,7 @@ const achivements = () => {
           }
           {
             List.map((element, i) => (
-              <div className="relative pl-12 mb-10 w-1/2 max-[1100px]:w-2/3 max-[750px]:w-full ">
+              <div className="relative pl-12 mb-10 w-1/2 max-[1100px]:w-2/3 max-[750px]:w-full z-50">
 
                 <span className="absolute left-[6px] top-2 w-4 h-4 bg-[#4a3c2a] rounded-full" />
 

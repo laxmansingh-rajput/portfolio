@@ -3,23 +3,31 @@ import details from '../data/Projectdetails.js'
 import live from '../assets/live.svg'
 import gh from '../assets/github.svg'
 import di from '../assets/dockerImage.svg'
+import { zoom, topDown } from '../controller/animation.js'
 
 const Projects = () => {
   const [projectIndex, setprojectIndex] = useState(0)
-
+  const [animate, setanimate] = useState(false)
+  const [animateProjects, setanimateProjects] = useState(false)
   useEffect(() => {
-    console.log(details)
+    setTimeout(() => {
+      setanimate(true)
+    }, 100);
+    setTimeout(() => {
+      setanimateProjects(true)
+    }, 100);
   }, [])
+
   const project = Object.values(details)
   const currentProject = project[projectIndex]
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center gap-6 md:gap-10 px-4 md:px-8 pt-20 md:pt-24 pb-8 font-mono relative">
 
-      <div className="absolute top-8 md:top-14 text-2xl md:text-[36px] font-bold tracking-wide text-black/70">
+      <div className={"absolute top-8 md:top-14 text-2xl md:text-[36px] font-bold tracking-wide text-black/70 " + zoom(animate)}>
         Projects
       </div>
 
-      <div className="w-full max-w-6xl flex flex-col lg:flex-row gap-6 md:gap-8">
+      <div className={"w-full max-w-6xl flex flex-col lg:flex-row gap-6 md:gap-8 " + zoom(animate)}>
         <div className="max-[1000px]:h-auto w-full lg:w-1/3  rounded-xl bg-[#EFE9E3]/40 shadow-lg  p-4 flex flex-col gap-3 md:gap-5 pt-14 md:pt-17
          relative ">
           <div className='absolute top-2 left-0 flex flex-col justify-center gap-1 p-4 font-bold text-lg md:text-xl h-12 w-full text-black/70'>
@@ -32,11 +40,16 @@ const Projects = () => {
             <div
               key={i}
               onClick={() => setprojectIndex(i)}
-              className={`rounded-lg px-3 py-2 cursor-pointer transition-all duration-300
+              className={`rounded-lg px-3 py-2 cursor-pointer transition-colors duration-300
+            ${topDown(animateProjects)}
                 ${projectIndex === i
-                  ? 'bg-[#C9B59C] shadow-md scale-[1.02]'
-                  : 'bg-[#F9F8F6] hover:bg-[#d9cabb] opacity-70 hover:opacity-100'
-                }`}
+                  ? ' bg-[#C9B59C] shadow-md scale-[1.02]'
+                  : ' bg-[#F9F8F6] hover:bg-[#d9cabb] opacity-70 hover:opacity-100'
+                } `}
+              style={{
+                transitionDelay: animateProjects ? `${i * 200}ms` : '0ms'
+              }}
+
             >
               <div className="text-base md:text-xl font-semibold text-black/80 mb-2">
                 {project.name}
@@ -46,7 +59,7 @@ const Projects = () => {
                 {project.tech.map((element, indexStack) => (
                   <div
                     key={indexStack}
-                    className={"px-2 py-0.5 rounded-sm text-[10px] md:text-[12px] bg-black/70 text-white hover:bg-black transition-colors duration-300" + ((indexStack > 2) ? " hidden" : "")}
+                    className={"px-2  py-0.5 rounded-sm text-[10px] md:text-[12px] bg-black/70 text-white hover:bg-black transition-colors duration-300" + ((indexStack > 2) ? " hidden" : "")}
                   >
                     {element}
                   </div>

@@ -31,7 +31,7 @@ const Skills = () => {
     return (
         <div
             className={`min-h-screen w-full flex items-center text-black/70 overflow-hidden max-[635px]:flex-col max-[635px]:overflow-scroll max-[635px]:pt-30 max-[635px]:pb-15 justify-center font-mono relative gap-6 transition-all duration-700
-            ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+            ${animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"} `}
 
         >
             <div className="absolute w-full text-[35px] font-bold top-12 left-0 text-center  ">
