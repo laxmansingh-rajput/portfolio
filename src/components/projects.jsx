@@ -41,7 +41,7 @@ const Projects = () => {
               key={i}
               onClick={() => setprojectIndex(i)}
               className={`rounded-lg px-3 py-2 cursor-pointer transition-colors duration-300
-            ${topDown(animateProjects)}
+          ${topDown(animateProjects)}
                 ${projectIndex === i
                   ? ' bg-[#C9B59C] shadow-md scale-[1.02]'
                   : ' bg-[#F9F8F6] hover:bg-[#d9cabb] opacity-70 hover:opacity-100'

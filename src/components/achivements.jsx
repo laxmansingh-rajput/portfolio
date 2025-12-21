@@ -25,7 +25,7 @@ const achivements = () => {
       <div className="absolute bottom-90 left-30 w-25 h-25 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
       <div className="absolute top-155 left-156 w-25 h-25 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
 
-      <div className={'flex flex-col items-center justify-center w-full absolute top-18 left-0 gap-1 text-[#3b3024]'+ zoom(animate)}>
+      <div className={'flex flex-col items-center justify-center w-full absolute top-18 left-0 gap-1 text-[#3b3024]' + zoom(animate)}>
         <div className='text-2xl font-bold'>
           My Journey
         </div>
@@ -83,14 +83,14 @@ const achivements = () => {
           }
           {
             List.map((element, i) => (
-              <div className="relative pl-12 mb-10 w-1/2 max-[1100px]:w-2/3 max-[750px]:w-full z-50">
+              <div className={`relative pl-12 mb-10 w-1/2 max-[1100px]:w-2/3 max-[750px]:w-full z-50 cursor-pointer group`} onClick={() => window.open(element.link)}>
 
                 <span className="absolute left-[6px] top-2 w-4 h-4 bg-[#4a3c2a] rounded-full" />
 
                 <div className="bg-[#d3ccc3]  border border-[#6b5a45] rounded-xl p-6 shadow-md">
 
                   <div className="flex justify-between items-center mb-2">
-                    <h2 className="text-md font-bold text-[#2e241a]">
+                    <h2 className="text-md font-bold text-[#2e241a] group-hover:underline transition-all ease-in duration-1000">
                       {
                         element.name
                       }

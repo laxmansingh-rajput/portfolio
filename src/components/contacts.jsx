@@ -156,7 +156,10 @@ const Contacts = () => {
               <label className="block text-sm opacity-90 mb-1">
                 Message
               </label>
-              <textarea onScroll={(e)=>{e.stopPropagation()}}
+              <textarea 
+              onWheel={(e) => {
+                e.stopPropagation();
+              }}
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
