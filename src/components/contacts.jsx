@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Youtube, Send } from "lucide-react";
 import { rotateIn, topDown } from '../controller/animation.js'
+import axios from "axios";
 
 const Contacts = () => {
 
@@ -25,13 +26,40 @@ const Contacts = () => {
     });
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+
     if (formData.name && formData.email && formData.message) {
-      setStatus('Message sent successfully!');
-      setTimeout(() => {
-        setStatus('');
-        setFormData({ name: '', email: '', message: '' });
-      }, 3000);
+      let parms = {
+        'name': formData.name,
+        'message': formData.message,
+        'email': formData.email
+      }
+      var data = {
+        service_id: 'service_hfbcjjh',
+        template_id: 'template_tnc19dk',
+        user_id: 'PeXIB5x8XOKyUz3KZ',
+        template_params: parms
+      };
+
+      const response = await axios.post(
+        'https://api.emailjs.com/api/v1.0/email/send',
+        data,
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      );
+      if (response.status == 200) {
+        setStatus('Message sent successfully!');
+        setTimeout(() => {
+          setStatus('');
+          setFormData({ name: '', email: '', message: '' });
+        }, 3000);
+      } else {
+        setStatus('Something went wrong!');
+      }
+      console.log(response.status)
     } else {
       setStatus('Please fill in all fields');
       setTimeout(() => setStatus(''), 2000);
@@ -65,7 +93,7 @@ const Contacts = () => {
                   Email
                 </p>
                 <p className="text-base font-medium break-all">
-                  laxmansinghrajput5417@.com
+                  laxmansinghrajput5417@gmail.com
                 </p>
               </div>
             </div>
@@ -133,7 +161,7 @@ const Contacts = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Hardik Kelotra"
+                placeholder="Enter your name"
                 className="w-full bg-transparent border-b-2 border-[#2f251b] border-opacity-30  outline-none placeholder:opacity-50 focus:border-opacity-100 transition-all"
               />
             </div>
@@ -147,7 +175,7 @@ const Contacts = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="hardikkelotra@gmail.com"
+                placeholder="Enter your Email"
                 className="w-full bg-transparent border-b-2 border-[#2f251b] border-opacity-30  outline-none placeholder:opacity-50 focus:border-opacity-100 transition-all"
               />
             </div>
@@ -156,10 +184,10 @@ const Contacts = () => {
               <label className="block text-sm opacity-90 mb-1">
                 Message
               </label>
-              <textarea 
-              onWheel={(e) => {
-                e.stopPropagation();
-              }}
+              <textarea
+                onWheel={(e) => {
+                  e.stopPropagation();
+                }}
                 name="message"
                 value={formData.message}
                 onChange={handleChange}

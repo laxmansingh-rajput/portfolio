@@ -8,7 +8,7 @@ const ProjectDetails = {
             </p>
         `,
         tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'AWS S3', 'CloudFront', 'OAuth'],
-        gihub: '',
+        gihub: 'https://github.com/laxmansingh-rajput/Gyan_pub',
         link: '',
         dockerHub: ''
     },
