@@ -16,7 +16,7 @@ import jenkins from '../assets/jenkins.svg'
 import kube from '../assets/kube.svg'
 import git from '../assets/git.svg'
 import aws from '../assets/aws.svg'
-import postman from '../assets/postman.svg'
+import postman from '../assets/nginx.svg'
 
 const Skills = () => {
     const [animate, setanimate] = useState(false)
@@ -116,7 +116,7 @@ const Skills = () => {
                         <Cards image={aws} name={'Aws'} />
                     </div>
                     <div className="flex items-center justify-center">
-                        <Cards image={postman} name={'postman'} />
+                        <Cards image={postman} name={'Nginx'} />
                     </div>
                     <div className=" text-center text-[15px] font-semibold underline absolute w-full bottom-0 left-0 ">
                         Devops & tools

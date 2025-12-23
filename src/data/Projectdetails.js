@@ -9,14 +9,14 @@ const ProjectDetails = {
         `,
         tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'AWS S3', 'CloudFront', 'OAuth'],
         gihub: 'https://github.com/laxmansingh-rajput/Gyan_pub',
-        link: '',
+        link: 'https://gyan.laxmansinghrajput.site',
         dockerHub: ''
     },
     project2: {
         name: 'QuizB',
         url: "https://www.youtube.com/embed/o8mNCVAwiXg?si=vdG1yIZWtzNf77u8",
         discription: '',
-        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'AWS S3', 'CloudFront', 'OAuth'],
+        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'OAuth'],
         gihub: '',
         link: '',
         dockerHub: ''
@@ -25,7 +25,7 @@ const ProjectDetails = {
         name: 'Bingo',
         url: "https://www.youtube.com/embed/o8mNCVAwiXg?si=vdG1yIZWtzNf77u8",
         discription: '',
-        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'AWS S3', 'CloudFront', 'OAuth'],
+        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'OAuth'],
         gihub: '',
         link: '',
         dockerHub: ''
