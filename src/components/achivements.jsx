@@ -17,7 +17,7 @@ const achivements = () => {
   }, [])
 
   return (
-    <div className={'min-h-screen w-full relative pt-40 font-mono ' + topDown(animate)}>
+    <div className={'min-h-screen w-full relative pt-40 font-mono p-2 ' + topDown(animate)}>
 
       <div className="absolute top-10 right-10 w-32 h-32 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
       <div className="absolute bottom-10 left-10 w-40 h-40 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
@@ -83,9 +83,9 @@ const achivements = () => {
           }
           {
             List.map((element, i) => (
-              <div className={`relative pl-12 mb-10 w-1/2 max-[1100px]:w-2/3 max-[750px]:w-full z-50 cursor-pointer group`} onClick={() => window.open(element.link)}>
+              <div className={`relative flex min-[600px]:pl-12 mb-10 w-1/2 max-[1100px]:w-2/3 max-[750px]:w-full z-50 cursor-pointer group`} onClick={() => window.open(element.link)}>
 
-                <span className="absolute left-[6px] top-2 w-4 h-4 bg-[#4a3c2a] rounded-full" />
+                <span className="absolute left-[6px] top-2 w-4 h-4 bg-[#4a3c2a] rounded-full max-[600px]:hidden" />
 
                 <div className="bg-[#d3ccc3]  border border-[#6b5a45] rounded-xl p-6 shadow-md">
 

@@ -25,7 +25,7 @@ const Skills = () => {
         setTimeout(() => {
             setanimate(true)
         }, 100);
-        localStorage.setItem('prev', '#EFE9E3')
+        sessionStorage.setItem('prev', '#EFE9E3')
     }, [])
 
     return (

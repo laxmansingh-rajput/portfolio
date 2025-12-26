@@ -12,12 +12,12 @@ const About = ({ setindex }) => {
         setInterval(() => {
             setanimate(true)
         }, 10);
-        localStorage.setItem('prev', '#F9F8F6')
+        sessionStorage.setItem('prev', '#F9F8F6')
     }, [])
 
 
     return (
-        <div className=' min-h-screen w-full flex items-center justify-center gap-10 font-mono overflow-hidden max-[900px]:flex-col max-[900px]:overflow-y-scroll max-[900px]:pt-18  pb-15'
+        <div className=' min-h-screen w-full flex items-center justify-center gap-10 font-mono overflow-hidden max-[900px]:flex-col max-[900px]:overflow-y-scroll max-[900px]:pt-18 pt-15  pb-15'
         >
             <div className={'h-auto w-1/2 flex flex-col gap-6 p-5 transition-transform duration-800 ease-out max-[900px]:w-full ' +
                 (animate ? 'translate-x-0' : '-translate-x-600')}>

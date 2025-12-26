@@ -9,7 +9,7 @@ import Contacts from './components/contacts.jsx'
 
 function App() {
   const [index, setindex] = useState(() => {
-    const ind = localStorage.getItem('index')
+    const ind = sessionStorage.getItem('index')
     if (ind) return Number(ind)
     return 0
   })
@@ -31,7 +31,7 @@ function App() {
   const colors = ['#F9F8F6', '#EFE9E3', '#D9CFC7', '#C9B59C', '#B8A082']
 
   const [prevColor, setprevColor] = useState(() => {
-    const color = localStorage.getItem('prev')
+    const color = sessionStorage.getItem('prev')
     return color || '#ffff'
   })
 
@@ -84,7 +84,7 @@ function App() {
         if (e.deltaY > 0 && (canChange === 2 || Number.isNaN(scrollPercentage))) {
           let newVal = Math.min(index + 1, list.length - 1)
           setindex(newVal)
-          localStorage.setItem('index', newVal)
+          sessionStorage.setItem('index', newVal)
           setanimate(false)
           setcanChange(1)
           setTimeout(() => setanimate(true), 800)
@@ -93,7 +93,7 @@ function App() {
         if (e.deltaY < 0 && (canChange === 0 || Number.isNaN(scrollPercentage))) {
           let newVal = Math.max(index - 1, 0)
           setindex(newVal)
-          localStorage.setItem('index', newVal)
+          sessionStorage.setItem('index', newVal)
           setanimate(false)
           setcanChange(1)
           setTimeout(() => setanimate(true), 800)
@@ -113,7 +113,7 @@ function App() {
         if (deltaY > 0 && (canChange === 2 || Number.isNaN(scrollPercentage))) {
           let newVal = Math.min(index + 1, list.length - 1)
           setindex(newVal)
-          localStorage.setItem('index', newVal)
+          sessionStorage.setItem('index', newVal)
           setanimate(false)
           setcanChange(1)
           setTimeout(() => setanimate(true), 800)
@@ -122,7 +122,7 @@ function App() {
         if (deltaY < 0 && (canChange === 0 || Number.isNaN(scrollPercentage))) {
           let newVal = Math.max(index - 1, 0)
           setindex(newVal)
-          localStorage.setItem('index', newVal)
+          sessionStorage.setItem('index', newVal)
           setanimate(false)
           setcanChange(1)
           setTimeout(() => setanimate(true), 800)
@@ -140,14 +140,13 @@ function App() {
           {list.map((_, i) => (
             <div
               key={i}
-              className={`rounded-full border border-gray-400/30 cursor-pointer hover:bg-black/30 transition-all duration-300 ease-out ${
-                i === index
-                  ? 'h-3 w-3 bg-black/40 scale-110'
-                  : 'h-2 w-2 bg-black/10'
-              }`}
+              className={`rounded-full border border-gray-400/30 cursor-pointer hover:bg-black/30 transition-all duration-300 ease-out ${i === index
+                ? 'h-3 w-3 bg-black/40 scale-110'
+                : 'h-2 w-2 bg-black/10'
+                }`}
               onClick={() => {
                 setindex(i)
-                localStorage.setItem('index', i)
+                sessionStorage.setItem('index', i)
               }}
             />
           ))}
