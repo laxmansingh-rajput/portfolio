@@ -67,14 +67,14 @@ const Contacts = () => {
   };
 
   return (
-    <section className={"min-h-screen w-full flex  justify-center relative font-mono  px-6 pt-40 pb-5 max-[900px]:pb-15"}>
+    <section className={"min-h-screen w-full flex  justify-center relative font-mono  px-6 pt-40 pb-5 max-[600px]:pt-45 max-[900px]:pb-15"}>
 
       <div className="absolute top-10 right-10 w-32 h-32 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
       <div className="absolute bottom-10 left-10 w-40 h-40 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
 
       <div className={"w-full absolute top-18 left-0 text-center mb-16" + topDown(animate)}>
         <h1 className="font-bold text-[#2f251b] text-2xl ">Get in Touch</h1>
-        <p className="text-sm text-[#2f251b] opacity-90">
+        <p className="text-sm text-[#2f251b] opacity-90 p-3">
           Have an idea, opportunity, or just want to say hi?
         </p>
       </div>

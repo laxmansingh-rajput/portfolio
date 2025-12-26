@@ -135,7 +135,7 @@ function App() {
 
       {list[index]}
 
-      <div className="main absolute bottom-0 w-full h-13 flex items-center justify-center transition-colors duration-500">
+      <div className="main absolute max-[700px]:hidden bottom-0 w-full h-13 flex items-center justify-center transition-colors duration-500">
         <div className="h-full flex items-center justify-center gap-2">
           {list.map((_, i) => (
             <div

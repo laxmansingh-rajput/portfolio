@@ -59,7 +59,7 @@ const Skills = () => {
                         <Cards image={javascript} name={'JS'} />
                     </div>
 
-                    <div className="absolute bottom-0 left-0 h-6 box-border w-full text-center text-[15px] font-semibold underline">
+                    <div className="absolute bottom-0.5 left-0  box-border w-full text-center text-sm max-[600px]:text-[12px] font-semibold underline">
                         Languages
                     </div>
 
@@ -78,7 +78,7 @@ const Skills = () => {
                     <div className="flex items-center justify-center">
                         <Cards image={tailwind} name={'Tailwind css'} />
                     </div>
-                    <div className=" text-center text-[15px] font-semibold underline absolute w-full bottom-0 left-0 ">
+                    <div className=" text-center text-sm max-[600px]:text-[12px] font-semibold underline absolute w-full bottom-0.5 left-0 ">
                         Frameworks & Libraries
                     </div>
                 </div>
@@ -94,7 +94,7 @@ const Skills = () => {
                     <div className="flex items-center justify-center">
                         <Cards image={sql} name={'My sql'} />
                     </div>
-                    <div className=" text-center text-[15px] font-semibold underline absolute w-full bottom-0 left-0 ">
+                    <div className=" text-center text-sm max-[600px]:text-[12px] font-semibold underline absolute w-full bottom-0.5 left-0 ">
                         Databases
                     </div>
                 </div>
@@ -118,7 +118,7 @@ const Skills = () => {
                     <div className="flex items-center justify-center">
                         <Cards image={postman} name={'Nginx'} />
                     </div>
-                    <div className=" text-center text-[15px] font-semibold underline absolute w-full bottom-0 left-0 ">
+                    <div className=" text-center text-sm max-[600px]:text-[12px] font-semibold underline absolute w-full bottom-0.5 left-0 ">
                         Devops & tools
                     </div>
                 </div>

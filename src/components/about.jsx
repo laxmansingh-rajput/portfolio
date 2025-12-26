@@ -21,19 +21,19 @@ const About = ({ setindex }) => {
         >
             <div className={'h-auto w-1/2 flex flex-col gap-6 p-5 transition-transform duration-800 ease-out max-[900px]:w-full ' +
                 (animate ? 'translate-x-0' : '-translate-x-600')}>
-                <div className='text-6xl font-bold  box-border '>
+                <div className='text-6xl max-[650px]:text-4xl font-bold  box-border '>
                     about.
                 </div>
-                <div className='text-[20px] text-black/70 font-medium '>
+                <div className='text-[20px] max-[650px]:text-[16px] text-black/70 font-medium '>
                     Hi, I’m Laxman Singh Rajput
                 </div>
-                <div className='text-[20px] text-black/70 font-medium '>
+                <div className='text-[20px] max-[650px]:text-[16px] text-black/70 font-medium '>
                     A Full-Stack Web Developer and a B.Tech student at Medi-Caps University, Indore.
                 </div>
-                <div className='text-[20px] text-black/70 font-medium '>
+                <div className='text-[20px] max-[650px]:text-[16px] text-black/70 font-medium '>
                     I build modern, scalable web applications using the MERN stack, and I have foundational knowledge of DevOps tools like Docker, Kubernetes, AWS, and Jenkins.
                 </div>
-                <div className='w-full flex items-center text-black/70  justify-start '>
+                <div className='w-full flex  max-[650px]:text-[16px] items-center text-black/70  justify-start '>
                     <div className='px-5 py-1 h-auto min-w-0  rounded-md bg-[#C9B59C] font-semibold cursor-pointer hover:scale-95 transition-all ease-in duration-200 ' onClick={() => {
                         window.location.href = "https://laxmanscertification.s3.ap-south-1.amazonaws.com/laxmanResume.pdf";
                     }}>

@@ -23,14 +23,14 @@ const Projects = () => {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center gap-6 gap-10 px-4 px-8 pt-32 pt-24 max-[]: pb-15 font-mono relative">
 
-      <div className={"absolute top-18 top-14 text-2xl  font-bold tracking-wide text-black/70 " + zoom(animate)}>
+      <div className={"absolute top-18  text-2xl  font-bold tracking-wide text-black/70 " + zoom(animate)}>
         Projects
       </div>
 
-      <div className={"w-full max-w-6xl flex flex-col lg:flex-row gap-6 gap-8 " + zoom(animate)}>
-        <div className="max-[1000px]:h-auto w-full lg:w-1/3  rounded-xl bg-[#EFE9E3]/40 shadow-lg  p-4 flex flex-col gap-3 gap-5 pt-14 pt-17
+      <div className={"w-full max-w-6xl flex flex-col lg:flex-row gap-6" + zoom(animate)}>
+        <div className="max-[1000px]:h-auto w-full lg:w-1/3  rounded-xl bg-[#EFE9E3]/40 shadow-lg  p-4 flex flex-col  gap-5  pt-17
          relative ">
-          <div className='absolute top-2 left-0 flex flex-col justify-center gap-1 p-4 font-bold text-lg text-xl h-12 w-full text-black/70'>
+          <div className='absolute top-2 left-0 flex flex-col justify-center gap-1 p-4 font-bold  text-xl h-12 w-full text-black/70'>
             <div>
               All Projects({project.length})
             </div>
@@ -51,7 +51,7 @@ const Projects = () => {
               }}
 
             >
-              <div className="text-base text-xl font-semibold text-black/80 mb-2">
+              <div className="text-xl max-[500px]:text-sm font-semibold text-black/80 mb-2">
                 {project.name}
               </div>
 
@@ -59,14 +59,14 @@ const Projects = () => {
                 {project.tech.map((element, indexStack) => (
                   <div
                     key={indexStack}
-                    className={"px-2  py-0.5 rounded-sm text-[10px] text-[12px] bg-black/70 text-white hover:bg-black transition-colors duration-300" + ((indexStack > 2) ? " hidden" : "")}
+                    className={"px-2  py-0.5 rounded-sm max-[500px]:text-[10px] text-[12px] bg-black/70 text-white hover:bg-black transition-colors duration-300" + ((indexStack > 2) ? " hidden" : "")}
                   >
                     {element}
                   </div>
                 ))}
                 {
                   <div
-                    className={"px-2 py-0.5 rounded-sm text-[10px] text-[12px] bg-black/70 text-white hover:bg-black transition-colors duration-300" + ((project.tech.length < 3) ? " hidden" : "")}
+                    className={"px-2 py-0.5 rounded-sm max-[500px]:text-[10px] text-[12px] bg-black/70 text-white hover:bg-black transition-colors duration-300" + ((project.tech.length < 3) ? " hidden" : "")}
                   >
                     {
                       "+" + (project.tech.length - 3)
@@ -85,9 +85,9 @@ const Projects = () => {
             </div>
             <div className='w-full border-1'></div>
           </div>
-          <div className="relative h-[230px] max-[650px]:w-9/10  w-2/3  aspect-video rounded-xl overflow-hidden shadow-lg mb-4 mb-6 bg-gray-900 flex">
+          <div className="relative h-[230px] max-[650px]:w-full  max-[650px]:h-full w-2/3  aspect-video rounded-xl overflow-hidden shadow-lg mb-4 mb-6 bg-gray-900 flex">
             <iframe
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 w-full h-full "
               src={currentProject.url}
               title="Project Demo Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -97,11 +97,11 @@ const Projects = () => {
           </div>
           <div className="w-full h-auto text-black/70 text-sm shrink-0" dangerouslySetInnerHTML={{ __html: currentProject.discription }}>
           </div>
-          <div className='flex items-center pt-2 gap-1 text-xs text-sm w-full flex-wrap'>
+          <div className='flex items-center pt-2 gap-1 text-sm w-full flex-wrap'>
             {currentProject.tech.map((element, indexStack) => (
               <div
                 key={indexStack}
-                className="px-2 py-0.5 w-auto rounded-sm text-[12px] text-[14px] cursor-pointer bg-black/80 text-white tracking-wide hover:bg-black transition-colors duration-300 flex items-center justify-center shrink-0"
+                className="px-2 py-0.5 w-auto rounded-sm text-[12px] max-[500px]:text-[10px] cursor-pointer bg-black/80 text-white tracking-wide hover:bg-black transition-colors duration-300 flex items-center justify-center shrink-0"
               >
                 {element}
               </div>

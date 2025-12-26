@@ -17,7 +17,7 @@ const achivements = () => {
   }, [])
 
   return (
-    <div className={'min-h-screen w-full relative pt-40 font-mono p-2 ' + topDown(animate)}>
+    <div className={'min-h-screen w-full relative pt-40 font-mono p-5' + topDown(animate)}>
 
       <div className="absolute top-10 right-10 w-32 h-32 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
       <div className="absolute bottom-10 left-10 w-40 h-40 rounded-full bg-[#2f251b] opacity-5 z-40"></div>
@@ -36,10 +36,10 @@ const achivements = () => {
 
       <div className='w-full h-auto flex flex-col items-center justify-center gap-9'>
 
-        <div className='w-full flex items-center justify-center gap-3'>
+        <div className='w-full flex items-center justify-center gap-3  '>
           <button
             className={
-              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1 ' +
+              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1 max-[550px]:text-sm ' +
               (curr == 1
                 ? 'bg-[#9C948B] text-[#2e241a]'
                 : 'bg-[#d3ccc3] text-[#4a3c2a] hover:bg-[#c6beb5]')
@@ -57,7 +57,7 @@ const achivements = () => {
 
           <button
             className={
-              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1  ' +
+              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1 max-[550px]:text-sm  ' +
               (curr == 2
                 ? 'bg-[#9C948B] text-[#2e241a]'
                 : 'bg-[#d3ccc3] text-[#4a3c2a] hover:bg-[#c6beb5]')
