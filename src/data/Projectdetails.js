@@ -1,6 +1,6 @@
 const ProjectDetails = {
     project1: {
-        name: 'Gyan',
+        name: 'NewsVault',
         url: "https://www.youtube.com/embed/o8mNCVAwiXg?si=vdG1yIZWtzNf77u8",
         discription: `
             <p>
@@ -8,21 +8,12 @@ const ProjectDetails = {
             </p>
         `,
         tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'AWS S3', 'CloudFront', 'OAuth'],
-        gihub: 'https://github.com/laxmansingh-rajput/Gyan_pub',
-        link: 'https://gyan.laxmansinghrajput.site',
+        gihub: 'https://github.com/laxmansingh-rajput/newsVault',
+        link: 'https://newsVault.laxmansinghrajput.site',
         dockerHub: ''
     },
     project2: {
         name: 'QuizB',
-        url: "https://www.youtube.com/embed/o8mNCVAwiXg?si=vdG1yIZWtzNf77u8",
-        discription: '',
-        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'OAuth'],
-        gihub: '',
-        link: '',
-        dockerHub: ''
-    },
-    project3: {
-        name: 'Bingo',
         url: "https://www.youtube.com/embed/o8mNCVAwiXg?si=vdG1yIZWtzNf77u8",
         discription: '',
         tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'OAuth'],
