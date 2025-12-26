@@ -34,7 +34,9 @@ const About = ({ setindex }) => {
                     I build modern, scalable web applications using the MERN stack, and I have foundational knowledge of DevOps tools like Docker, Kubernetes, AWS, and Jenkins.
                 </div>
                 <div className='w-full flex items-center text-black/70  justify-start '>
-                    <div className='px-5 py-1 h-auto min-w-0  rounded-md bg-[#C9B59C] font-semibold cursor-pointer hover:scale-95 transition-all ease-in duration-200 '>
+                    <div className='px-5 py-1 h-auto min-w-0  rounded-md bg-[#C9B59C] font-semibold cursor-pointer hover:scale-95 transition-all ease-in duration-200 ' onClick={() => {
+                        window.location.href = "https://laxmansinghrajput.s3.ap-south-1.amazonaws.com/laxmanResume";
+                    }}>
                         View Resume
                     </div>
                 </div>

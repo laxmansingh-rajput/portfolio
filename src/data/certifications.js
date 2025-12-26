@@ -4,7 +4,7 @@ const certDetails = {
         discription: 'Provided exposure to Docker, Kubernetes, CI/CD, and DevSecOps fundamentals, and how modern cloud-native deployments are managed on Oracle Cloud Infrastructure.',
         year: '2025',
         subtitle: 'Issued by Oracle | Advanced DevOps on OCI',
-        link: 'https://laxmanscertification.s3.ap-south-1.amazonaws.com/eCertificateoracle.pdf',
+        link: 'https://laxmansinghrajput.s3.ap-south-1.amazonaws.com/eCertificateoracle.pdf',
     },
     
 };
