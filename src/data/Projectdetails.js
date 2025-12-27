@@ -10,16 +10,22 @@ const ProjectDetails = {
         tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'AWS S3', 'CloudFront', 'OAuth'],
         gihub: 'https://github.com/laxmansingh-rajput/newsVault',
         link: 'https://newsVault.laxmansinghrajput.site',
-        dockerHub: ''
+        dockerHub: 'https://hub.docker.com/repositories/laxmansinghrajput'
     },
     project2: {
         name: 'QuizB',
         url: "https://www.youtube.com/embed/o8mNCVAwiXg?si=vdG1yIZWtzNf77u8",
-        discription: '',
+        discription: `
+            <p>
+            In progress: Building a <b>quiz generation platform</b> where users can create and share quizzes in real time. 
+            Includes a <b>practice mode</b> that generates quizzes from user-provided text and an <b>AI-powered quiz generator</b> using LLM APIs.
+            </p>
+        `
+        ,
         tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'OAuth'],
-        gihub: '',
+        gihub: 'https://github.com/laxmansingh-rajput/QuizB',
         link: '',
-        dockerHub: ''
+        dockerHub: 'https://hub.docker.com/repositories/laxmansinghrajput'
     }
 };
 

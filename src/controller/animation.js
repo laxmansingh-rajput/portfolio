@@ -7,10 +7,9 @@ export const zoom = (animate) => {
 }
 export const topDown = (animate, i) => {
     if (animate)
-        return ` opacity-100 scale-100 translate-y-0 transition-opacity transition-transform duration-700
- duration-700 `
+        return ` opacity-100 scale-100 translate-y-0  transition-all duration-700 `
     else
-        return ` opacity-0 scale-95 -translate-y-5 transition-opacity transition-transform duration-700
+        return ` opacity-0 scale-95 -translate-y-5  transition-all duration-700
  duration-700`
 }
 
