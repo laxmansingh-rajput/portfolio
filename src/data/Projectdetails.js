@@ -8,7 +8,7 @@ const ProjectDetails = {
             </p>
         `,
         tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'AWS S3', 'CloudFront', 'OAuth'],
-        gihub: 'https://github.com/laxmansingh-rajput/newsVault',
+        github: 'https://github.com/laxmansingh-rajput/newsVault',
         link: 'https://newsVault.laxmansinghrajput.site',
         dockerHub: 'https://hub.docker.com/repositories/laxmansinghrajput'
     },
@@ -23,7 +23,7 @@ const ProjectDetails = {
         `
         ,
         tech: ['Jenkins', 'Nginx', 'Docker', 'EC2'],
-        gihub: 'https://github.com/laxmansingh-rajput/distributed-cicd-pipeline-jenkins-docker',
+        github: 'https://github.com/laxmansingh-rajput/distributed-cicd-pipeline-jenkins-docker',
         link: '',
         dockerHub: 'https://hub.docker.com/repositories/laxmansinghrajput'
     },
@@ -38,7 +38,7 @@ const ProjectDetails = {
         `
         ,
         tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'OAuth'],
-        gihub: 'https://github.com/laxmansingh-rajput/QuizB',
+        github: 'https://github.com/laxmansingh-rajput/QuizB',
         link: '',
         dockerHub: 'https://hub.docker.com/repositories/laxmansinghrajput'
     }
