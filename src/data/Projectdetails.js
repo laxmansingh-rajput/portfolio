@@ -23,7 +23,7 @@ const ProjectDetails = {
         `
         ,
         tech: ['Jenkins', 'Nginx', 'Docker', 'EC2'],
-        gihub: 'https://github.com/laxmansingh-rajput/QuizB',
+        gihub: 'https://github.com/laxmansingh-rajput/distributed-cicd-pipeline-jenkins-docker',
         link: '',
         dockerHub: 'https://hub.docker.com/repositories/laxmansinghrajput'
     },
