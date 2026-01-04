@@ -109,12 +109,12 @@ const Projects = () => {
           </div>
 
           <div className='h-10 w-full absolute bottom-1 max-[1000px]:bottom-5 left-0 flex items-center justify-end gap-2 p-4'>
-            <img
+            {(currentProject.link) && <img
               src={live}
               title="Live Project"
               className="h-6 h-7 cursor-pointer hover:scale-110 transition-all ease-in duration-200"
               onClick={() => window.open(currentProject.link, '_blank')}
-            />
+            />}
 
             <img
               src={gh}
