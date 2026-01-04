@@ -13,6 +13,21 @@ const ProjectDetails = {
         dockerHub: 'https://hub.docker.com/repositories/laxmansinghrajput'
     },
     project2: {
+        name: 'Distributed CI/CD Pipeline ',
+        url: "https://www.youtube.com/embed/4IYP8YZSpCM?si=vVg0-XWF99QxLEAD",
+        discription: `
+            <p>
+            Developed an <span><b>end-to-end DevOps CI/CD pipeline</b></span> for deploying a <span><b>full-stack map application</b></span>. Implemented <span><b>Jenkins</b></span> for automated build and deployment workflows. Containerized application services using <span><b>Docker</b></span> and deployed multiple services simultaneously with <span><b>Docker Compose</b></span>. Built and pushed versioned images to <span><b>Docker Hub</b></span>. Configured <span><b>NGINX</b></span> as a <span><b>reverse proxy</b></span> for domain-based routing, enabling a production-like deployment setup.
+            </p>
+
+        `
+        ,
+        tech: ['Jenkins', 'Nginx', 'Docker', 'EC2'],
+        gihub: 'https://github.com/laxmansingh-rajput/QuizB',
+        link: '',
+        dockerHub: 'https://hub.docker.com/repositories/laxmansinghrajput'
+    },
+    project3: {
         name: 'QuizB',
         url: "https://www.youtube.com/embed/o8mNCVAwiXg?si=vdG1yIZWtzNf77u8",
         discription: `
