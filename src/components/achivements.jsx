@@ -7,7 +7,7 @@ import { zoom, topDown } from '../controller/animation.js'
 const achivements = () => {
   const [curr, setcurr] = useState(1)
   const [List, setList] = useState(() => {
-    return Object.values(certifications)
+    return Object.values(experience)
   })
   const [animate, setanimate] = useState(false)
   useEffect(() => {
@@ -37,9 +37,10 @@ const achivements = () => {
       <div className='w-full h-auto flex flex-col items-center justify-center gap-9'>
 
         <div className='w-full flex items-center justify-center gap-3  '>
+
           <button
             className={
-              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1 max-[550px]:text-sm ' +
+              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1 max-[550px]:text-sm  ' +
               (curr == 1
                 ? 'bg-[#9C948B] text-[#2e241a]'
                 : 'bg-[#d3ccc3] text-[#4a3c2a] hover:bg-[#c6beb5]')
@@ -47,6 +48,24 @@ const achivements = () => {
             onClick={
               () => {
                 setcurr(1)
+                setList(Object.values(experience))
+              }
+            }
+          >
+            <div>Experience</div>
+            <div>({Object.values(experience).length})</div>
+          </button>
+
+          <button
+            className={
+              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1 max-[550px]:text-sm ' +
+              (curr == 2
+                ? 'bg-[#9C948B] text-[#2e241a]'
+                : 'bg-[#d3ccc3] text-[#4a3c2a] hover:bg-[#c6beb5]')
+            }
+            onClick={
+              () => {
+                setcurr(2)
                 setList(Object.values(certifications))
               }
             }
@@ -55,23 +74,7 @@ const achivements = () => {
             <div>({Object.values(certifications).length})</div>
           </button>
 
-          <button
-            className={
-              ' px-4 py-1 rounded-full cursor-pointer shadow-md font-semibold  transition-all ease-in duration-100 flex items-center gap-1 max-[550px]:text-sm  ' +
-              (curr == 2
-                ? 'bg-[#9C948B] text-[#2e241a]'
-                : 'bg-[#d3ccc3] text-[#4a3c2a] hover:bg-[#c6beb5]')
-            }
-            onClick={
-              () => {
-                setcurr(2)
-                setList(Object.values(experience))
-              }
-            }
-          >
-            <div>Experience</div>
-            <div>({Object.values(experience).length})</div>
-          </button>
+
         </div>
 
         <div className='w-full min-h-[400px] flex flex-col items-center p-4'>
