@@ -35,7 +35,7 @@ const About = ({ setindex }) => {
                 </div>
                 <div className='w-full flex  max-[650px]:text-[16px] items-center text-black/70  justify-start '>
                     <div className='px-5 py-1 h-auto min-w-0  rounded-md bg-[#C9B59C] font-semibold cursor-pointer hover:scale-95 transition-all ease-in duration-200 ' onClick={() => {
-                        window.location.href = "https://laxmanscertification.s3.ap-south-1.amazonaws.com/laxmanResume.pdf";
+                        window.location.href = "https://drive.google.com/file/d/1Fn9SaX1x3t85hhzTuJ1tWXX8RcWsPSfi/view?usp=drive_link";
                     }}>
                         View Resume
                     </div>
